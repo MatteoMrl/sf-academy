@@ -237,7 +237,7 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 150px;
+  min-height: 150px;
   background-color: #ff9900;
 }
 
@@ -257,11 +257,23 @@ footer ul a:visited,
 footer ul a:active {
   text-decoration: none;
   color: black;
+  border: 1px solid red;
   opacity: 70%;
+}
+
+footer ul a i,
+footer ul a:link i,
+footer ul a:visited i,
+footer ul a:active i {
+  display: block !important;
 }
 
 footer ul a:hover {
   opacity: 100%;
+}
+
+footer .footer-copyright {
+  padding: 0;
 }
 
 footer .footer-copyright i {
@@ -548,10 +560,9 @@ main {
   background-color: #121212;
 }
 
-#favouriteFilms .card img {
+#favouriteFilms .card .card-img-top {
   height: 300px;
   width: 200px;
-  opacity: 80%;
 }
 
 #favouriteFilms .card .card-body .card-title {
@@ -581,10 +592,6 @@ main {
 #favouriteFilms .card:hover {
   position: relative;
   bottom: 20px;
-}
-
-#favouriteFilms .card:hover img {
-  opacity: 100%;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -660,7 +667,7 @@ main {
   #favouriteFilms .card {
     width: 150px;
   }
-  #favouriteFilms .card img {
+  #favouriteFilms .card .card-img-top {
     width: 150px;
     height: 225px;
   }
